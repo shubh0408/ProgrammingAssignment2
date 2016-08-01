@@ -4,13 +4,23 @@
 ## This function is used to creater a special matrix
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
+  
+  #Set the matrix
   set <- function(y) {
     x <<- y
     m <<- NULL
   }
+  
+  #Get the matrix
   get <- function() x
+  
+  #Set Inverse
   setmatrix_inverse <- function(inverse) m <<- inverse
+  
+  #Get Inverse
   getmatrix_inverse <- function() m
+  
+  #List of methods
   list(set = set, get = get,
        setmatrix_inverse = setmatrix_inverse,
        getmatrix_inverse = getmatrix_inverse)
